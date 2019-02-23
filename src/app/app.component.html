@@ -1,20 +1,124 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="app">
+  <form [formGroup]="myForm" novalidate>
+  <section>
+    <div class="page">
+      <div class="inner">
+        <header class="header">
+          <div class="logo">
+            <img src="assets/logo.png" alt="">
+          </div>
+          <div class="title ">
+            <h3>Miriam Vázquez Cázares</h3><br>
+            <p>RFC: VACM820122H13 CURP: VACM820122MMNZZR09</p>
+            <p>"Régimen de incorporación fiscal"</p><br>
+            <p><b>Tel. 324 1696 / Cel. 4432099925</b></p>
+          </div>
+          <div class="budget">
+            <table>
+              <tr>
+                <td id="budget">PRESUPUESTO</td>
+              </tr>
 
+              <tr>
+                <td id="_budg">
+                  <input type="number">
+                </td>
+              </tr>
+            </table>
+          </div>
+        </header>
+        <section class="content">
+          <table id="tab1">
+            <tr>
+              <td>
+                <span class="line">Expedido en Morelia Mich a: </span>
+                <input id="date" type="text" class="left-aligned">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="line">Nombre: </span>
+                <input id="name" type="text" class="left-aligned">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="line">Domicilio: </span>
+                <input id="adress" type="text" class="left-aligned">
+              </td>
+            </tr>
+          </table>
+          <table id="tab2">
+            <tr>
+              <td id="city">
+                <span class="line">Ciudad: </span>
+                <input id="cit" type="text" class="left-aligned">
+              </td>
+              <td id="city">
+                <span class="line">RFC: </span>
+                <input id="rfc" type="text" class="left-aligned">
+              </td>
+            </tr>
+          </table>
+
+          <section class="section2" formArrayName="units">
+            <div class="table">
+              <div class="tr thead">
+                <div class="td">CANT.</div>
+                <div class="td">DESCRIPCION</div>
+                <div class="td">P.UNIT.</div>
+                <div class="td">IMPORTE</div>
+              </div>
+          <!--    <div *ngFor="let unit of myForm.controls.units.controls; let i=index" class="tr" [formGroupName]="i">-->
+              <div *ngFor="let unit of getControls(myForm, 'units'); let i=index" class="tr" [formGroupName]="i">
+               <!-- <div [formGroupName]="i">-->
+                  <div class="td"><input type="number" formControlName="qty" class="cantidad"></div>
+                  <div class="td"><input type="text" class="descripcion"></div>
+                  <div class="td"><input type="number" formControlName="price" class="punitario"></div>
+                  <div class="td"><input formControlName="subtotal" class="importe"></div>
+               <!-- </div>-->
+              </div>
+
+            </div>
+            <div class="table" id="warranty">
+              <div class="tr">
+                <div class="td" id="_warr"><span>TODA REPARACIÓN TIENE GARANTÍA POR 60 DIAS EN MANO DE OBRA Y EN
+                    REFACCIONES LA ESPECIFICADA POR EL FABRICANTE, SIEMPRE Y CUANDO NO MANIFIESTE MAL USO, NEGLIGENCIA O
+                    DESCUIDO.</span></div>
+                <div class="td">
+                  <label for="total">TOTAL $</label>
+                </div>
+                <div class="td">
+                  <input  class="_total" value="{{ total | currency:'USD':'symbol-narrow':'1.2-2'}}">
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section3">
+
+            <div>
+              <p id= "_subtitle"><b>CANTIDAD TOTAL CON LETRA</b></p>
+              <table id="_total_letter">
+                  <tr>
+                    <td>                      
+                      <input id="_number" type="text" class="left-aligned" value ="{{numero + ' pesos 00/100 MN'}}">
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          </section>
+
+          <section id="_foot">
+            <span>
+              Pudenciano Dorantes 415 Col. Nueva Chapultepec C.P. 58218 Morelia, Mich.
+            </span>
+          </section>
+        </section>
+        <div class="no-print" id="printBtn" onclick="window.print()">
+          <img src="assets/save.png" alt="" width="75" height="75">
+        </div>
+      </div>
+    </div>
+  </section>
+  </form>
+</div>

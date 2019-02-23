@@ -1,0 +1,267 @@
+  header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+    justify-content: space-between; 
+    /*align-items: center;
+   /* align-items: flex-end;
+    /*top: 35px;*/
+  }
+  header .logo {
+    width: 30%;
+    height: 100%;
+    padding-left: 6mm;
+  }
+  header .logo img {
+    position: relative;
+    width: var(--logo-width); 
+   /* left: 42%;*/
+  }
+  header .title {
+    position: relative;
+    width: calc(100% - var(--logo-width) - 6cm);
+    text-align: center;
+    padding-top: 2mm;
+  }
+  header .title p{
+    font-size: 0.7em;
+  }
+  header .budget{
+    position: relative;
+    width: 6cm;
+    padding-right: 6mm;
+    padding-top: 2mm;
+  }
+  header table{
+    border-spacing: 0;
+  }
+  header .budget  tr{
+    width: 6cm;
+  }
+  header .budget #budget{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    background: var(--text-color);
+    height: 6mm;
+    border-bottom: 1px solid var(--text-color);
+    margin: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  header .budget #_budg{
+    border:1px solid var(--text-color);
+    height: 8mm;
+    margin-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  #_budg input{
+    color: red;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  
+  
+  .content {
+    width: 100%;
+    padding: 0 6mm;
+    height: calc(100% - 200px);
+  }
+  table {
+    width: 100%;
+  }
+  #tab1{
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+    border-top: 1px solid var(--text-color);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  
+  #tab2{
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  td{
+    height: 7mm;
+    border-bottom: 1px solid #bbb;
+  }
+  #city{
+    border-bottom: none;
+  }
+  .line {
+    font-size: .8em;
+    margin: 2mm 2mm;
+  }
+  #date{
+    width: calc(100% - 5cm);
+  }
+  #name{
+    width: calc(100% - 2cm);
+  }
+  #adress{
+    width: calc(100% - 2.2cm);
+  }
+  #rfc{
+    width: calc(100% - 1.3cm);
+  }
+  #cit{
+    width: calc(100% - 1.7cm);
+  }
+
+  .section2 {margin-top:4mm; margin-bottom: 1mm;}
+  .section2 .table {
+    display: table;
+    width: 100%;
+    border: 1px solid var(--text-color);
+    border-radius: 2px;
+  }
+  .section2 .table .tr.thead .td {
+    padding: 5px 0;
+    background: var(--text-color);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+  }
+  .section2 .tr {
+    display: table-row;
+    height: 7mm;
+    font-size: .9em;
+  }
+  .section2 .tr input {
+    border: none;
+    width: 100%;
+  }
+  .section2 .tr .td.description {
+    padding: 2mm;
+  }
+  .section2 .tr.thead {
+    display: table-header-group;
+    height: 7mm;
+    text-align: center;
+   
+  }
+  
+  .section2 .tr.thead .td:nth-child(1){
+    width: 1.5cm;border-right: 0;
+  }
+  .section2 .tr.thead .td:nth-child(2){
+    width: calc(100%- 6.5cm);border-right: 0;
+  }
+  .section2 .tr.thead .td:nth-child(3),
+  .section2 .tr.thead .td:nth-child(4){
+    width: 2.5cm;
+    border-right: 0;
+  }
+  
+  .section2 .td {
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    
+  }
+  
+  .section2 #warranty .td:nth-child(1){
+   width: 13.95cm;
+    border:0;
+    font-size: 0.9em;
+    color: #777;
+    padding-left: 4mm;
+    padding-right: 2.4cm;
+  }
+  .section2 #warranty .td:nth-child(2){
+    width: 2.5cm;
+     border: 1px solid var(--text-color);
+     font-size: 0.9em;
+     color: #fff;
+     background: var(--text-color);
+     font-weight: 700;
+     text-align: center;
+     border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+   }
+   .section2 #warranty .td:nth-child(3){
+    border: 1px solid var(--text-color);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+   }
+  #warranty{
+    margin-top: 3mm;
+    border: 0;
+    margin-bottom: 5mm;
+  }
+  #warranty input{
+    font-weight: 700;
+    font-size: 1em;
+  }
+  
+  .section3 #_total_letter td{
+    border: 1px solid var(--text-color);
+    border-radius: 2px;
+    height: 1cm;
+    vertical-align: middle;
+    margin-bottom: 3mm;
+    width: 100%;
+  }
+  #_total_letter input{
+    padding: 2mm;
+    width: 100%;
+  }
+  #_foot{
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 2mm;
+  }
+  #_subtitle{
+    font-size: 0.9em;
+  }
+
+  #printBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #printBtn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  input[type="text"] {
+    font-family: var(--font);
+    color: var(--input-text-color);
+    width: 100%;
+    border: none;
+    padding: 0 5px;
+    outline: none; 
+    /*font-size: var(--font-size);*/
+    font-size: 1em;
+    text-align: left;
+  }
+  input {
+    font-family: var(--font);
+    color: var(--input-text-color);
+    width: 100%;
+    border: none;
+    padding: 0 5px;
+    outline: none; 
+    font-size: var(--font-size);
+    text-align: center;
+  }
+  input[type=text].left-aligned { 
+    text-align: left; padding-left: .5em;
+  }

@@ -56,6 +56,7 @@
     border:1px solid var(--text-color);
     height: 8mm;
     margin-top: 0;
+    
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
   }
@@ -89,6 +90,10 @@
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
   }
+  #tab3{
+    border-left: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
 
   td{
     height: 7mm;
@@ -115,6 +120,14 @@
   }
   #cit{
     width: calc(100% - 1.7cm);
+  }
+  #unit{
+    width: calc(100% - 1.7cm);
+  }
+  #main_table{
+    background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('../assets/logo1.png');
+    background-repeat: no-repeat;
+    width: 100%;
   }
 
   .section2 {margin-top:4mm; margin-bottom: 1mm;}
@@ -251,6 +264,7 @@
     /*font-size: var(--font-size);*/
     font-size: 1em;
     text-align: left;
+    background: none;
   }
   input {
     font-family: var(--font);
@@ -261,6 +275,7 @@
     outline: none; 
     font-size: var(--font-size);
     text-align: center;
+    background: none;
   }
   input[type=text].left-aligned { 
     text-align: left; padding-left: .5em;

@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import * as num from 'written-number';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import { CurrencyPipe } from '@angular/common';
+//import * as fecha from 'fecha';
+import 'fecha';
+import fechaObj from 'fecha';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +17,7 @@ export class AppComponent {
   total: number = 0;
   myformValuesChanges$;
   numero :  num;
+  fecha : string;
 
   constructor(
     private fb: FormBuilder,
@@ -21,7 +25,7 @@ export class AppComponent {
   ){  }
 
   ngOnInit(){
-    
+    this.fecha = fechaObj.format(new Date(),'D [de] MMMM [de] YYYY');
     this.myForm = this.fb.group({
       units: this.fb.array([
         this.getUnit()

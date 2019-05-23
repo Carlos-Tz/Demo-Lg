@@ -5,7 +5,7 @@
       <div class="inner">
         <header class="header">
           <div class="logo">
-            <img src="assets/logo.png" alt="">
+            <img src="assets/logo1.png" alt="">
           </div>
           <div class="title ">
             <h3>Miriam Vázquez Cázares</h3><br>
@@ -16,7 +16,7 @@
           <div class="budget">
             <table>
               <tr>
-                <td id="budget">PRESUPUESTO</td>
+                <td id="budget">NOTA DE VENTA</td>
               </tr>
 
               <tr>
@@ -25,6 +25,7 @@
                 </td>
               </tr>
             </table>
+            <img src="assets/full.PNG" style="width:100%; margin-top:2mm">
           </div>
         </header>
         <section class="content">
@@ -32,15 +33,23 @@
             <tr>
               <td>
                 <span class="line">Expedido en Morelia Mich a: </span>
-                <input id="date" type="text" class="left-aligned">
+                <input id="date" type="text" class="left-aligned" value={{fecha}}>
               </td>
             </tr>
+          </table>
+          <table id="tab3">
             <tr>
               <td>
                 <span class="line">Nombre: </span>
                 <input id="name" type="text" class="left-aligned">
               </td>
+              <td>
+                <span class="line">Unidad: </span>
+                <input id="unit" type="text" class="left-aligned">
+              </td>
             </tr>
+          </table>
+          <table id="tab3">
             <tr>
               <td>
                 <span class="line">Domicilio: </span>
@@ -62,7 +71,7 @@
           </table>
 
           <section class="section2" formArrayName="units">
-            <div class="table">
+            <div class="table" id="main_table">
               <div class="tr thead">
                 <div class="td">CANT.</div>
                 <div class="td">DESCRIPCION</div>
